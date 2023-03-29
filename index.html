@@ -1,33 +1,16 @@
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Exercice HTML</title>
-	</head>
-	
-	<body>
+<body>
+<script>
+function envoi_serveur(){
+var Saisie = document.getElementById('saisie').value;
+var req= new XMLHttpRequest();
+req.open("GET","roulette_Russe_Etape_1_barillet?mot="+Saisie,false); 
+req.send(null); 
+document.getElementById('Result').innerHTML = req.responseText;;
+}
+</script>
 
-<style>
-li>ul{color:red}		
-
-</style>		
-
-
-<h1> Nom Prénom</h1>
-
-<!-- Liste à puces -->
-<ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-</ul>
-
-<!-- Liste ordonnée -->
-<ol>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
-</ol>
+<a href="Roulette_Russe_Etape_1_Barillet.html">Roulette russe</a>
 
 </body>
-
 </html>
